@@ -35,6 +35,11 @@ namespace Vidly_Udemy.Migrations
                 .Build();
 
             context.Customers.AddOrUpdate(c => c.Id, customers.ToArray());
+
+            //var movies = Builder<Movie>.CreateListOfSize(50)
+            //    .All()
+            //        .With(m => m.Name = "NameHere")
+            //    .Build();
             
         }
 
