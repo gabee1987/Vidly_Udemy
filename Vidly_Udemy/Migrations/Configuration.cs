@@ -29,11 +29,20 @@ namespace Vidly_Udemy.Migrations
                 .All()
                     .With(c => c.Name = Faker.Name.FullName())
                     .With(c => c.IsSubscribedToNewsletter = rnd.Next(100) <= 50 ? true : false)
-                    .With(c => c.MembershipTypeId = (byte)Faker.RandomNumber.Next(1, 4))
+                    .With(c => c.MembershipTypeId = (byte)Faker.RandomNumber.Next(1, 5))
+                    .With(c => c.BirthDate = null)
+                    .With(c => c.BirthDate = RandomDay(rnd))
                 .Build();
 
             context.Customers.AddOrUpdate(c => c.Id, customers.ToArray());
             
+        }
+
+        private DateTime RandomDay(Random rnd)
+        {
+            DateTime start = new DateTime(1965, 1, 1);
+            int range = (DateTime.Today - start).Days;
+            return start.AddDays(rnd.Next(range));
         }
     }
 }
