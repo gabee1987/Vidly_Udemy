@@ -17,5 +17,6 @@ namespace Vidly_Udemy.Models
         public byte GenreId { get; set; }
         public DateTime ReleaseDate { get; set; }
         public DateTime DateAdded { get; set; }
+        public byte NumberInStock { get; set; }
     }
 }

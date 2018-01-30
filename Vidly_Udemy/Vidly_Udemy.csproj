@@ -395,6 +395,10 @@
     <Compile Include="Migrations\201801291515317_Genres1.Designer.cs">
       <DependentUpon>201801291515317_Genres1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801301629037_addMissingPropertyToMovies.cs" />
+    <Compile Include="Migrations\201801301629037_addMissingPropertyToMovies.Designer.cs">
+      <DependentUpon>201801301629037_addMissingPropertyToMovies.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -424,6 +428,9 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="MovieTitles\movie_list.txt" />
+    <Content Include="MovieTitles\movie_list_onlyTitles.txt" />
+    <Content Include="MovieTitles\movie_list_years.txt" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -649,6 +656,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801291515317_Genres1.resx">
       <DependentUpon>201801291515317_Genres1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801301629037_addMissingPropertyToMovies.resx">
+      <DependentUpon>201801301629037_addMissingPropertyToMovies.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
